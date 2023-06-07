@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="image_background_height">300dp</dimen>
+
+    <dimen name="label_font_size">24sp</dimen>
+</resources>

@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Layouts</string>
+
+    <string name="name_text">Name</string>
+    <string name="lastname_text">Lastname</string>
+    <string name="surname_text">Surname</string>
+    <string name="phone_text">Phone</string>
+    <string name="action_text">Save Profile</string>
 </resources>

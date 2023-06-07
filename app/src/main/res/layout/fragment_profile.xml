@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".ProfileFragment">
+
+        <View
+            android:id="@+id/image_background"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/image_background_height"
+            android:background="@color/purple_200"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_profile_picture"
+            android:layout_width="@dimen/image_size"
+            android:layout_height="@dimen/image_size"
+            android:src="@drawable/circle_profile"
+            app:layout_constraintBottom_toBottomOf="@+id/image_background"
+            app:layout_constraintEnd_toEndOf="@+id/image_background"
+            app:layout_constraintStart_toStartOf="@+id/image_background"
+            app:layout_constraintTop_toTopOf="@id/image_background" />
+
+        <TextView
+            android:id="@+id/tv_name_title"
+            style="@style/Text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/name_text"
+            app:layout_constraintBottom_toBottomOf="@id/edt_name"
+            app:layout_constraintEnd_toEndOf="@id/vertical_guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/edt_name" />
+
+        <EditText
+            android:id="@+id/edt_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/edittext_margin_top"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/vertical_guideline"
+            app:layout_constraintTop_toBottomOf="@id/image_background" />
+
+        <View
+            android:id="@+id/name_divider"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/divider_height"
+            android:layout_marginHorizontal="@dimen/divider_horizontal_margin"
+            android:layout_marginVertical="@dimen/divider_vertical_margin"
+            android:background="#D3D3D3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edt_name" />
+
+        <TextView
+            android:id="@+id/tv_lastname_title"
+            style="@style/Text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/lastname_text"
+            app:layout_constraintBottom_toBottomOf="@id/edt_lastname"
+            app:layout_constraintEnd_toEndOf="@id/vertical_guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/edt_lastname" />
+
+        <EditText
+            android:id="@+id/edt_lastname"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/edittext_margin_top"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/vertical_guideline"
+            app:layout_constraintTop_toBottomOf="@id/name_divider" />
+
+        <View
+            android:id="@+id/lastname_divider"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/divider_height"
+            android:layout_marginHorizontal="@dimen/divider_horizontal_margin"
+            android:layout_marginVertical="@dimen/divider_vertical_margin"
+            android:background="#D3D3D3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edt_lastname" />
+
+        <TextView
+            android:id="@+id/tv_surname_title"
+            style="@style/Text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/surname_text"
+            app:layout_constraintBottom_toBottomOf="@id/edt_surname"
+            app:layout_constraintEnd_toEndOf="@id/vertical_guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/edt_surname" />
+
+        <EditText
+            android:id="@+id/edt_surname"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/edittext_margin_top"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/vertical_guideline"
+            app:layout_constraintTop_toBottomOf="@id/lastname_divider" />
+
+        <View
+            android:id="@+id/surname_divider"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/divider_height"
+            android:layout_marginHorizontal="@dimen/divider_horizontal_margin"
+            android:layout_marginVertical="@dimen/divider_vertical_margin"
+            android:background="#D3D3D3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edt_surname" />
+
+        <TextView
+            android:id="@+id/tv_phone_title"
+            style="@style/Text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/phone_text"
+            app:layout_constraintBottom_toBottomOf="@id/edt_phone"
+            app:layout_constraintEnd_toEndOf="@id/vertical_guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/edt_phone" />
+
+        <EditText
+            android:id="@+id/edt_phone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/edittext_margin_top"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/vertical_guideline"
+            app:layout_constraintTop_toBottomOf="@id/surname_divider" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_margin="32dp"
+            android:text="@string/action_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edt_phone" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vertical_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.32" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
