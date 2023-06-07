@@ -10,8 +10,8 @@ import androidx.activity.result.contract.ActivityResultContracts
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var btnOpenLinear: Button
-    private lateinit var btnOpenGallery: Button
+//    private lateinit var btnOpenLinear: Button
+//    private lateinit var btnOpenGallery: Button
 
     private val launcher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result->
 
@@ -20,21 +20,23 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        initViews()
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.fragment_container, ProfileFragment())
+            .commit()
     }
 
 
     private fun initViews() {
-        btnOpenLinear = findViewById(R.id.btn_linear)
-        btnOpenLinear.setOnClickListener {
-            val intent = Intent(this, LinearLayoutActivity::class.java)
-            startActivity(intent)
-        }
-        btnOpenGallery = findViewById(R.id.btn_open_gallery)
-        btnOpenGallery.setOnClickListener {
-            val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
-            launcher.launch(intent)
-        }
+//        btnOpenLinear = findViewById(R.id.btn_linear)
+//        btnOpenLinear.setOnClickListener {
+//            val intent = Intent(this, LinearLayoutActivity::class.java)
+//            startActivity(intent)
+//        }
+//        btnOpenGallery = findViewById(R.id.btn_open_gallery)
+//        btnOpenGallery.setOnClickListener {
+//            val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
+//            launcher.launch(intent)
+//        }
     }
 
 
